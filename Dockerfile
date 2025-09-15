@@ -70,8 +70,7 @@ EXPOSE 7777/udp 7778/udp 27015/udp 32330 8080
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-# Configure o volume para dados persistentes
-VOLUME ["/ark/ShooterGame/Saved", "/ark-backup"]
+## VOLUME removido para compatibilidade com Railway (persistência não suportada)
 
 # Defina o ponto de entrada
 ENTRYPOINT ["/entrypoint.sh"]
